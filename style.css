@@ -1,10 +1,411 @@
-.jumbotron {
-  padding-top: 6rem;
-  background-color: #8fe2b6;
+/* ---------- Dasar ---------- */
+html {
+  scroll-behavior: smooth;
 }
+
+section {
+  padding-top: 5rem;
+}
+
+/* Gelombang SVG di dasar tiap section (bukan SVG badge di hero) */
+section > svg {
+  display: block;
+  width: 100%;
+  margin-bottom: -1px; /* tutup celah tipis antar section */
+}
+
+/* ---------- Hero (jumbotron) ---------- */
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 5rem;
+  background: linear-gradient(135deg, #8fe2b6 0%, #5fd0a0 50%, #3fb68b 100%);
+}
+
+/* Konten hero berada di atas bubble */
+.jumbotron > .container {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 8rem; /* ruang agar tidak tertimpa gelombang. Besar = konten naik, kecil = turun */
+}
+
+/* Gelombang putih menempel di dasar hero */
+.jumbotron > svg:last-child {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+/* Teks hero */
+.jumbotron .display-4 {
+  font-weight: 600;
+}
+
+.jumbotron .lead {
+  min-height: 2.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f5132;
+}
+
+.hero-greet {
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #14352a;
+}
+
+.hero-accent {
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-desc {
+  max-width: 520px;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  color: #14352a;
+}
+
+@media (max-width: 991px) {
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-photo {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ---------- Bubble latar ---------- */
+.bubble {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+}
+.b1 {
+  width: 220px;
+  height: 220px;
+  top: 12%;
+  left: 8%;
+}
+.b2 {
+  width: 140px;
+  height: 140px;
+  top: 55%;
+  right: 10%;
+}
+.b3 {
+  width: 90px;
+  height: 90px;
+  top: 20%;
+  right: 22%;
+}
+.b4 {
+  width: 160px;
+  height: 160px;
+  bottom: 22%;
+  left: 14%;
+}
+.b5 {
+  width: 70px;
+  height: 70px;
+  bottom: 30%;
+  left: 34%;
+}
+.b6 {
+  width: 200px;
+  height: 200px;
+  bottom: 18%;
+  right: 16%;
+}
+.b7 {
+  width: 50px;
+  height: 50px;
+  bottom: 38%;
+  right: 38%;
+}
+
+/* ---------- Foto + dekorasi ---------- */
+.photo-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.jumbotron .photo-wrap img {
+  width: min(100%, 330px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  box-shadow:
+    0 0 0 8px rgba(255, 255, 255, 0.35),
+    0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.deco-stripe {
+  position: absolute;
+  left: -10px;
+  bottom: 12%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: repeating-linear-gradient(45deg, #14352a 0 4px, transparent 4px 9px);
+  opacity: 0.55;
+}
+
+.deco-star {
+  position: absolute;
+  top: 4%;
+  right: -6px;
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+}
+
+.jumbotron .hero-badge {
+  position: absolute;
+  right: -18px;
+  bottom: 4%;
+  width: 115px;
+  height: 115px;
+  margin: 0;
+  padding: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+/* ---------- Warna latar per section ---------- */
+/* Warna ini harus sama dengan fill gelombang di atasnya:
+   #about    <- gelombang putih milik hero
+   #projects <- gelombang #8fe2b6 milik About
+   #contact  <- gelombang putih milik Projects/Gallery */
+#about,
+#contact {
+  background-color: #ffffff;
+}
+
 #projects {
   background-color: #8fe2b6;
 }
-section {
-  padding-top: 5rem;
+
+/* ---------- Gallery ---------- */
+
+/* ---------- Kurangi gerakan untuk pengguna yang memintanya ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ==========================================================
+   Tambahkan di AKHIR style.css
+   Hapus juga aturan lama: .gallery-img dan #gallery .row > *
+   ========================================================== */
+
+/* ---------- Latar section baru ---------- */
+/* Selang-seling putih dan hijau, warna harus sama dengan fill gelombang di atasnya */
+#experience {
+  background-color: #ffffff;
+}
+#experience .container {
+  padding-bottom: 2rem;
+}
+#skills {
+  background-color: #8fe2b6;
+}
+#education {
+  background-color: #ffffff;
+  padding-bottom: 4rem;
+}
+
+/* ---------- Pengalaman kerja (timeline) ---------- */
+.timeline {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: #5fd0a0;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #198754;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #198754;
+}
+.timeline-card {
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #d3eee0;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(25, 135, 84, 0.08);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(25, 135, 84, 0.16);
+}
+.timeline-date {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #198754;
+  background: #e6f7ee;
+  border-radius: 999px;
+}
+.timeline-role {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.timeline-company {
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  color: #198754;
+}
+.timeline-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.timeline-card li {
+  margin-bottom: 0.35rem;
+}
+
+/* ---------- Keahlian ---------- */
+.skill-heading {
+  margin: 0 0 1.2rem;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #14352a;
+}
+.skill-heading:not(:first-of-type) {
+  margin-top: 2.5rem;
+}
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1.4rem 1rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(20, 53, 42, 0.1);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(20, 53, 42, 0.18);
+}
+.skill-card i {
+  margin-bottom: 0.6rem;
+  font-size: 2rem;
+  line-height: 1;
+  color: #198754;
+}
+.skill-card span {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.soft-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  padding-bottom: 1rem;
+}
+.soft-badge {
+  padding: 0.4rem 1.1rem;
+  font-weight: 500;
+  color: #14352a;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid #ffffff;
+  border-radius: 999px;
+}
+
+/* ---------- Pendidikan ---------- */
+.edu-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #d3eee0;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(25, 135, 84, 0.08);
+}
+.edu-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  font-size: 1.8rem;
+  color: #ffffff;
+  background: #198754;
+  border-radius: 50%;
+}
+.edu-degree {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.edu-school {
+  margin: 0 0 0.5rem;
+  color: #4b5b53;
+}
+.edu-card .timeline-date {
+  margin-bottom: 0;
+}
+
+.about-card {
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.05rem;
+  text-align: left;
+  background: #ffffff;
+  border: 1px solid #d3eee0;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(25, 135, 84, 0.08);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(25, 135, 84, 0.16);
 }

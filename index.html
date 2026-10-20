@@ -7,12 +7,13 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-
-    <!-- Boostrap icoon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
-    <title>My Portofolio | La Ode Reynald Ibrahim</title>
+    <title>My Portfolio | La Ode Reynald Ibrahim</title>
   </head>
   <body id="home">
     <!-- navbar -->
@@ -34,6 +35,15 @@
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
@@ -43,10 +53,45 @@
     <!--akhir navbar  -->
 
     <!-- jumbotron -->
-    <section class="jumbotron text-center">
-      <img src="img/foto.jpeg" alt="reynald ibrahim " width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">La Ode Reynald Ibrahim</h1>
-      <p class="lead">Teknisi | IT Support</p>
+    <section class="jumbotron">
+      <span class="bubble b1"></span>
+      <span class="bubble b2"></span>
+      <span class="bubble b3"></span>
+      <span class="bubble b4"></span>
+      <span class="bubble b5"></span>
+      <span class="bubble b6"></span>
+      <span class="bubble b7"></span>
+
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- kiri: teks -->
+          <div class="col-lg-7 order-2 order-lg-1 hero-text text-center text-lg-start">
+            <p class="hero-greet">Halo, saya</p>
+            <h1 class="display-4">La Ode <span class="hero-accent">Reynald Ibrahim</span></h1>
+            <p class="lead"></p>
+            <p class="hero-desc">Lulusan S1 Teknik Informatika yang berpengalaman menangani troubleshooting komputer dan jaringan, konfigurasi LAN, serta dukungan teknis untuk pengguna.</p>
+          </div>
+
+          <!-- kanan: foto -->
+          <div class="col-lg-5 order-1 order-lg-2 hero-photo text-center">
+            <div class="photo-wrap">
+              <img src="img/foto.jpeg" alt="La Ode Reynald Ibrahim" class="rounded-circle img-thumbnail" />
+              <span class="deco-stripe"></span>
+              <span class="deco-star"></span>
+              <svg class="hero-badge" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <path id="badgePath" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0" />
+                </defs>
+                <text font-size="9.5" font-weight="600" fill="#14352a" letter-spacing="1">
+                  <textPath href="#badgePath" textLength="278">IT SUPPORT • NETWORK • HARDWARE •</textPath>
+                </text>
+                <polygon points="60,46 64,56 74,60 64,64 60,74 56,64 46,60 56,56" fill="#14352a" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -65,11 +110,23 @@
             <h2>About Me</h2>
           </div>
         </div>
-        <div class="row justify-content-between fs-5 text-center">
-          <div class="col-md-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus quis accusamus excepturi quidem? Mollitia fugiat perspiciatis atque exercitationem dolorum magni.</div>
-          <div class="col-md-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptatibus debitis! Obcaecati beatae perferendis eos id? Eaque saepe modi nemo dolore similique reiciendis dolorem aperiam?</div>
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="about-card">
+              Saya La Ode Reynald Ibrahim, lulusan S1 Teknik Informatika Universitas Muslim Indonesia yang berdomisili di Kendari, Sulawesi Tenggara. Saya berfokus pada bidang IT Support, mulai dari troubleshooting komputer dan jaringan,
+              instalasi sistem operasi, hingga konfigurasi LAN dan perangkat pendukung IT lainnya. Saya senang memecahkan masalah teknis dan memastikan perangkat serta jaringan bisa digunakan dengan lancar oleh penggunanya.
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+            <div class="about-card">
+              Saya memiliki pengalaman sebagai IT Support di Klinik Sarlina SAF Kendari dan IT Support Intern di PT Sarana Maju Indosteel. Di sana, saya menangani monitoring jaringan, maintenance dan upgrade PC, pemasangan kabel LAN, hingga
+              penataan perangkat CCTV, sekaligus memberikan dukungan teknis langsung kepada staf dan pengguna. Berbekal kemampuan analisis masalah, komunikasi yang baik, dan kemauan untuk terus belajar, saya siap berkontribusi dalam tim IT
+              yang membutuhkan dukungan teknis yang andal.
+            </div>
+          </div>
         </div>
       </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#8fe2b6"
@@ -89,42 +146,42 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/projects/2.jpeg" class="card-img-top" alt="Projects 2" />
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="img/projects/1.jpeg" class="card-img-top" alt="Projects 1" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Reset waste ink pad counter pada printer Epson L405 menggunakan adjustment program agar printer dapat berfungsi kembali.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
+              <img src="img/projects/2.jpeg" class="card-img-top" alt="Projects 2" />
+              <div class="card-body">
+                <p class="card-text">Pemasangan konektor RJ45 pada kabel LAN dengan tang crimping untuk memulihkan konektivitas jaringan.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="img/projects/3.jpeg" class="card-img-top" alt="Projects 3" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Persiapan pemasangan CCTV, mencakup kamera, kabel LAN UTP, dan perangkat pendukung untuk penataan di area kantor.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
               <img src="img/projects/4.jpeg" class="card-img-top" alt="Projects 4" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Instalasi ulang sistem operasi Windows pada komputer kantor, termasuk pengaturan awal agar siap digunakan.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
               <img src="img/projects/5.jpeg" class="card-img-top" alt="Projects 5" />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Pengecekan dan perawatan perangkat keras PC, mulai dari merapikan kabel, memeriksa komponen, hingga upgrade untuk menunjang kinerja.</p>
               </div>
             </div>
           </div>
@@ -140,6 +197,165 @@
     </section>
     <!-- akhir project -->
 
+    <!-- Galery -->
+    <section id="experience">
+      <div class="container">
+        <div class="row text-center mb-4">
+          <div class="col">
+            <h2>Work Experience</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <!-- pengalaman 1 -->
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-card">
+              <span class="timeline-date">November 2025 – Mei 2026</span>
+              <h3 class="timeline-role">IT Support Intern</h3>
+              <p class="timeline-company">PT Sarana Maju Indosteel</p>
+              <ul>
+                <li>Memantau jaringan dan membantu memastikan konektivitas kantor berjalan stabil.</li>
+                <li>Melakukan troubleshooting dan maintenance pada komputer dan printer yang mengalami kendala.</li>
+                <li>Menginstal dan mengonfigurasi sistem operasi Windows, driver, serta software yang diperlukan.</li>
+                <li>Mengidentifikasi dan menangani permasalahan hardware maupun software pada komputer.</li>
+                <li>Membantu pemasangan dan penataan perangkat CCTV di area kantor.</li>
+                <li>Memberikan dukungan teknis kepada pengguna untuk kendala komputer, printer, dan jaringan.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- pengalaman 2 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="timeline-card">
+              <span class="timeline-date">Juni – November 2025</span>
+              <h3 class="timeline-role">IT Support</h3>
+              <p class="timeline-company">Klinik Sarlina SAF Kendari</p>
+              <ul>
+                <li>Melakukan monitoring dan troubleshooting jaringan agar koneksi internet klinik berjalan baik.</li>
+                <li>Melakukan upgrade dan maintenance PC, termasuk peningkatan komponen perangkat keras.</li>
+                <li>Menginstal dan mengonfigurasi kabel LAN pada komputer yang mengalami kendala konektivitas.</li>
+                <li>Memastikan perangkat keras dan perangkat lunak operasional klinik berfungsi dengan baik.</li>
+                <li>Membantu pasien menggunakan aplikasi Mobile JKN dan mengakses layanan digital.</li>
+                <li>Memberikan dukungan teknis kepada staf klinik agar pelayanan berjalan lancar.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#8fe2b6"
+          fill-opacity="1"
+          d="M0,0L40,5.3C80,11,160,21,240,53.3C320,85,400,139,480,165.3C560,192,640,192,720,181.3C800,171,880,149,960,138.7C1040,128,1120,128,1200,144C1280,160,1360,192,1400,208L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- AKhir Galeri -->
+    <!-- skill -->
+    <section id="skills">
+      <div class="container">
+        <div class="row text-center mb-4">
+          <div class="col">
+            <h2>My Skills</h2>
+          </div>
+        </div>
+
+        <h3 class="skill-heading">Hard Skills</h3>
+        <div class="row justify-content-center g-3">
+          <div class="col-6 col-md-3" data-aos="fade-up">
+            <div class="skill-card">
+              <i class="bi bi-diagram-3"></i>
+              <span>Network Troubleshooting</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-card">
+              <i class="bi bi-ethernet"></i>
+              <span>LAN Configuration</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-card">
+              <i class="bi bi-wifi"></i>
+              <span>Basic Networking</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-card">
+              <i class="bi bi-pc-display"></i>
+              <span>Hardware &amp; Software Troubleshooting</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up">
+            <div class="skill-card">
+              <i class="bi bi-windows"></i>
+              <span>Windows Installation &amp; Configuration</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-card">
+              <i class="bi bi-download"></i>
+              <span>Driver &amp; Software Installation</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-card">
+              <i class="bi bi-printer"></i>
+              <span>Printer Troubleshooting</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-card">
+              <i class="bi bi-camera-video"></i>
+              <span>CCTV Installation &amp; Configuration</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="skill-heading">Soft Skills</h3>
+        <div class="soft-skills" data-aos="fade-up">
+          <span class="soft-badge">Komunikasi Efektif</span>
+          <span class="soft-badge">Kerja Sama Tim</span>
+          <span class="soft-badge">Pemecahan Masalah</span>
+          <span class="soft-badge">Manajemen Waktu</span>
+          <span class="soft-badge">Adaptasi</span>
+        </div>
+      </div>
+
+      <!-- gelombang putih (menuju section Education) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,96L48,133.3C96,171,192,245,288,272C384,299,480,277,576,256C672,235,768,213,864,208C960,203,1056,213,1152,213.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- akhir skill -->
+    <!-- Education -->
+    <section id="education">
+      <div class="container">
+        <div class="row text-center mb-4">
+          <div class="col">
+            <h2>Education</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6" data-aos="fade-up">
+            <div class="edu-card">
+              <div class="edu-icon"><i class="bi bi-mortarboard"></i></div>
+              <div>
+                <h3 class="edu-degree">S1 Teknik Informatika</h3>
+                <p class="edu-school">Universitas Muslim Indonesia</p>
+                <span class="timeline-date">2020 – 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Education -->
+
     <!-- contact -->
     <section id="contact">
       <div class="container">
@@ -150,20 +366,28 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <div class="alert alert-primary alert-dismissible fade show d-none my-alert" role="alert">
+              <strong>Terimakasih</strong> Pesan Anda Sudah Kami Terima.
+              <button type="button" class="btn-close" onclick="this.parentElement.classList.add('d-none')" aria-label="Close"></button>
+            </div>
+            <form name="contact-form">
               <div class="mb-3">
-                <label for="Name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" required />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
-                <div class="mb-3">
-                  <label for="pesan" class="form-label">Pesan</label>
-                  <textarea class="form-control" id="pesan" rows="3"></textarea>
-                </div>
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" required />
               </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -177,11 +401,76 @@
       </svg>
     </section>
     <!-- akhir contact -->
+
     <!-- footer -->
     <footer class="bg-success text-white text-center p-3">
-      <p>Created with love by <a href="https://www.instagram.com/reynaa.aa_" class="text-white fw-bold">La Ode Reynald Ibrahim</a></p>
+      <p>Created by <a href="https://www.instagram.com/reynaa.aa_" class="text-white fw-bold">La Ode Reynald Ibrahim</a></p>
     </footer>
     <!-- akhir footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 1000,
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+
+      gsap.from('.jumbotron .photo-wrap img', { duration: 1, x: 100, opacity: 0, ease: 'back' });
+      gsap.from('.navbar', { duration: 1, y: '-100%', opacity: 0, ease: 'bounce' });
+      gsap.from('.display-4', { duration: 2, x: -50, opacity: 0, delay: 0.5 });
+      gsap.to('.lead', { duration: 2, delay: 1.5, text: 'Technician | IT Support', ease: 'none' });
+
+      gsap.to('.b1', { y: 30, x: 15, duration: 4, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+      gsap.to('.b2', { y: -25, x: -20, duration: 5, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+      gsap.to('.b3', { y: 20, x: -10, duration: 3.5, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+      gsap.to('.b4', { y: -25, x: 20, duration: 4.5, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+      gsap.to('.b5', { y: 20, x: -15, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+      gsap.to('.b6', { y: 30, x: -25, duration: 5.5, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+      gsap.to('.b7', { y: -18, x: 12, duration: 3.8, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+      // teks kiri
+      gsap.from('.hero-greet', { duration: 1, x: -40, opacity: 0, delay: 0.3 });
+      gsap.from('.hero-desc', { duration: 1, y: 20, opacity: 0, delay: 3.2 });
+
+      // dekorasi foto
+      gsap.from('.deco-star, .deco-stripe, .hero-badge', { duration: 0.8, scale: 0, opacity: 0, stagger: 0.2, delay: 1.2, ease: 'back' });
+      gsap.to('.hero-badge', { rotation: 360, duration: 16, repeat: -1, ease: 'none', delay: 2.5 });
+      gsap.to('.deco-star', { rotation: 360, duration: 8, repeat: -1, ease: 'none', delay: 2.5 });
+      gsap.to('.deco-stripe', { y: -12, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 2.5 });
+    </script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyzQAOJ8AjgktPGtXFg1Lihw9gfM0feH1wWkckQ-44t1gksxAinTruatLFm5cR0plQ/exec';
+      const form = document.forms['contact-form'];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        btnLoading.classList.remove('d-none');
+        btnKirim.classList.add('d-none');
+
+        fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
+          .then(() => {
+            btnLoading.classList.add('d-none');
+            btnKirim.classList.remove('d-none');
+            myAlert.classList.remove('d-none');
+            form.reset();
+            console.log('Success! Pesan Terkirim');
+          })
+          .catch((error) => {
+            btnLoading.classList.add('d-none');
+            btnKirim.classList.remove('d-none');
+            console.error('Error!', error.message);
+          });
+      });
+    </script>
   </body>
 </html>
